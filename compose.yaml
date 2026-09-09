@@ -1,6 +1,7 @@
 services:
   qdrant:
     image: qdrant/qdrant:v1.19.0
+
     container_name: qazaqrag-qdrant
 
     ports:
@@ -12,5 +13,35 @@ services:
 
     restart: unless-stopped
 
+
+  api:
+    build: .
+
+    container_name: qazaqrag-api
+
+    depends_on:
+      - qdrant
+
+    environment:
+      QAZAQRAG_QDRANT_URL: http://qdrant:6333
+
+      QAZAQRAG_LLM_PROVIDER: ${QAZAQRAG_LLM_PROVIDER:-stub}
+
+      QAZAQRAG_OPENAI_API_KEY: ${QAZAQRAG_OPENAI_API_KEY:-}
+
+      QAZAQRAG_OPENAI_MODEL: ${QAZAQRAG_OPENAI_MODEL:-gpt-5.6-luna}
+
+      HF_HOME: /cache/huggingface
+
+    ports:
+      - "127.0.0.1:8000:8000"
+
+    volumes:
+      - hf_cache:/cache/huggingface
+
+    restart: unless-stopped
+
+
 volumes:
   qdrant_storage:
+  hf_cache:
