@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 from uuid import NAMESPACE_URL, uuid5
 
@@ -7,7 +8,11 @@ from qdrant_client import QdrantClient, models
 from rag.chunking import Chunk
 from rag.retrieval import SearchResult
 
-DEFAULT_QDRANT_URL = "http://localhost:6333"
+# DEFAULT_QDRANT_URL = "http://localhost:6333"
+DEFAULT_QDRANT_URL = os.getenv(
+    "QDRANT_URL",
+    "http://localhost:6333",
+)
 
 DEFAULT_COLLECTION_NAME = "qazaqrag_chunks"
 

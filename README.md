@@ -59,3 +59,31 @@ Compared systems:
 2. Multilingual E5 + Qdrant
 3. Dense + BM25 + Reciprocal Rank Fusion
 4. Hybrid retrieval + multilingual cross-encoder reranking
+
+                         QUERY
+                           │
+                           ▼
+                        FastAPI
+                           │
+                ┌──────────┴──────────┐
+                ▼                     ▼
+         Multilingual E5            BM25
+                │                     │
+                ▼                     │
+             Qdrant                   │
+                │                     │
+                └─────────┬───────────┘
+                          ▼
+                         RRF
+                          │
+                          ▼
+                 BGE Reranker
+                          │
+                          ▼
+                     Top-K Context
+                          │
+                          ▼
+                     OpenAI LLM
+                          │
+                          ▼
+                 Answer + Citations
