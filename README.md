@@ -32,3 +32,30 @@ keyword/identifier retrieval.
 
 Retrieval is optimized for candidate recall, while the
 reranker improves final precision.
+
+## Retrieval Evaluation
+
+The retrieval stack is evaluated against a manually labeled
+multilingual golden query set.
+
+The benchmark includes:
+
+- semantic queries;
+- cross-lingual queries;
+- exact identifiers;
+- hard-negative documents;
+- unanswerable queries.
+
+Metrics:
+
+- Recall@1 / Recall@3 / Recall@5
+- MRR@5
+- NDCG@5
+- median local query latency
+
+Compared systems:
+
+1. BM25
+2. Multilingual E5 + Qdrant
+3. Dense + BM25 + Reciprocal Rank Fusion
+4. Hybrid retrieval + multilingual cross-encoder reranking

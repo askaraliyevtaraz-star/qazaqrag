@@ -1,0 +1,73 @@
+method,query_id,query,query_type,query_language,answerable,latency_ms,top1_source,top1_score,recall@1,recall@3,recall@5,mrr@5,ndcg@5
+dense,q01,На сколько дней можно взять обычную книгу?,semantic,ru,True,2087.1021999046206,library_ru.md,0.86621255,1.0,1.0,1.0,1.0,1.0
+dense,q02,How long can I borrow a regular book?,cross_lingual,en,True,2090.2881000656635,library_services_en.md,0.8484689,0.0,1.0,1.0,0.3333333333333333,0.5
+dense,q03,Кітапты кітапханадан қанша күнге алуға болады?,cross_lingual,kk,True,2095.7507002167404,library_ru.md,0.8385459,1.0,1.0,1.0,1.0,1.0
+dense,q04,Какой минимальный GPA нужен для сохранения стипендии?,semantic,ru,True,2110.444499878213,scholarship_ru.md,0.91081864,1.0,1.0,1.0,1.0,1.0
+dense,q05,What happens if my GPA drops below the scholarship requirement?,cross_lingual,en,True,2098.6440000124276,academic_progress_en.md,0.88542795,0.0,1.0,1.0,0.5,0.6309297535714574
+dense,q06,How many students are required to create a new club?,cross_lingual,en,True,2086.0254000872374,clubs_kk.md,0.86226594,1.0,1.0,1.0,1.0,1.0
+dense,q07,Жаңа клубты тіркеу үшін қанша студент керек?,semantic,kk,True,2105.2027998957783,clubs_kk.md,0.8725909,1.0,1.0,1.0,1.0,1.0
+dense,q08,What is the fall deadline for registering a new student club?,cross_lingual,en,True,2061.7110000457615,clubs_kk.md,0.8439735,1.0,1.0,1.0,1.0,1.0
+dense,q09,Что делать если я забыл пароль от университетского Wi-Fi?,cross_lingual,ru,True,2105.845100013539,it_support_kk.md,0.83151954,1.0,1.0,1.0,1.0,1.0
+dense,q10,How quickly are ordinary IT support requests reviewed?,cross_lingual,en,True,2106.8284001667053,it_support_kk.md,0.8129693,1.0,1.0,1.0,1.0,1.0
+dense,q11,Во сколько начинается режим тишины в общежитии?,cross_lingual,ru,True,2089.446699945256,housing_access_ru.md,0.8660969,0.0,1.0,1.0,0.3333333333333333,0.5
+dense,q12,When is the standard admissions application deadline?,semantic,en,True,2088.8879001140594,admissions_en.md,0.8977112,1.0,1.0,1.0,1.0,1.0
+dense,q13,REG-4721,identifier,mixed,True,2058.4869000595063,regulations_catalog_en.md,0.85705864,0.0,1.0,1.0,0.5,0.6590018048024133
+dense,q14,What is form APL-19 used for?,identifier,en,True,2098.601399920881,regulations_ru.md,0.785931,1.0,1.0,1.0,1.0,0.8262346571285599
+dense,q15,Что регулирует REG-8850?,identifier,ru,True,2093.7320000957698,regulations_ru.md,0.88566214,0.5,1.0,1.0,1.0,1.0
+dense,q16,What food is served in the university cafeteria?,unanswerable,en,False,2106.788800098002,it_support_kk.md,0.76021653,,,,,
+dense,q17,Где студенты могут парковать автомобили?,unanswerable,ru,False,2087.9347999580204,housing_access_ru.md,0.7942878,,,,,
+dense,q18,Какие спортивные секции доступны студентам?,unanswerable,ru,False,2073.3119000215083,scholarship_ru.md,0.7866372,,,,,
+bm25,q01,На сколько дней можно взять обычную книгу?,semantic,ru,True,4.467700142413378,library_ru.md,2.750462055206299,1.0,1.0,1.0,1.0,1.0
+bm25,q02,How long can I borrow a regular book?,cross_lingual,en,True,2.2152001038193703,scholarship_ru.md,0.0,0.0,0.0,0.0,0.0,0.0
+bm25,q03,Кітапты кітапханадан қанша күнге алуға болады?,cross_lingual,kk,True,1.4833000022917986,it_support_kk.md,0.9118134379386902,0.0,0.0,0.0,0.0,0.0
+bm25,q04,Какой минимальный GPA нужен для сохранения стипендии?,semantic,ru,True,1.183799933642149,scholarship_ru.md,3.3101751804351807,1.0,1.0,1.0,1.0,1.0
+bm25,q05,What happens if my GPA drops below the scholarship requirement?,cross_lingual,en,True,0.8654999546706676,academic_progress_en.md,2.7942419052124023,0.0,1.0,1.0,0.5,0.6309297535714574
+bm25,q06,How many students are required to create a new club?,cross_lingual,en,True,0.804099952802062,club_events_en.md,1.4000346660614014,0.0,0.0,0.0,0.0,0.0
+bm25,q07,Жаңа клубты тіркеу үшін қанша студент керек?,semantic,kk,True,0.7055997848510742,clubs_kk.md,5.0235700607299805,1.0,1.0,1.0,1.0,1.0
+bm25,q08,What is the fall deadline for registering a new student club?,cross_lingual,en,True,0.6079000886529684,club_events_en.md,2.653210163116455,0.0,0.0,0.0,0.0,0.0
+bm25,q09,Что делать если я забыл пароль от университетского Wi-Fi?,cross_lingual,ru,True,0.5709000397473574,it_support_kk.md,1.8236268758773804,1.0,1.0,1.0,1.0,1.0
+bm25,q10,How quickly are ordinary IT support requests reviewed?,cross_lingual,en,True,0.8999998681247234,scholarship_ru.md,0.0,0.0,0.0,0.0,0.0,0.0
+bm25,q11,Во сколько начинается режим тишины в общежитии?,cross_lingual,ru,True,0.8556998800486326,scholarship_ru.md,0.0,0.0,0.0,0.0,0.0,0.0
+bm25,q12,When is the standard admissions application deadline?,semantic,en,True,0.7062000222504139,admissions_en.md,5.137380123138428,1.0,1.0,1.0,1.0,1.0
+bm25,q13,REG-4721,identifier,mixed,True,0.5489001050591469,regulations_catalog_en.md,2.090649127960205,0.0,1.0,1.0,0.5,0.6590018048024133
+bm25,q14,What is form APL-19 used for?,identifier,en,True,0.6092002149671316,regulations_ru.md,1.4924356937408447,1.0,1.0,1.0,1.0,0.9639404333166532
+bm25,q15,Что регулирует REG-8850?,identifier,ru,True,0.6472000386565924,regulations_ru.md,2.735276222229004,0.5,1.0,1.0,1.0,0.9197207891481876
+bm25,q16,What food is served in the university cafeteria?,unanswerable,en,False,0.5960999988019466,admissions_en.md,0.9336222410202026,,,,,
+bm25,q17,Где студенты могут парковать автомобили?,unanswerable,ru,False,0.6391999777406454,library_ru.md,1.3268882036209106,,,,,
+bm25,q18,Какие спортивные секции доступны студентам?,unanswerable,ru,False,0.687299994751811,housing_access_ru.md,1.075042963027954,,,,,
+hybrid,q01,На сколько дней можно взять обычную книгу?,semantic,ru,True,2093.0227001663297,library_ru.md,0.03278688524590164,1.0,1.0,1.0,1.0,1.0
+hybrid,q02,How long can I borrow a regular book?,cross_lingual,en,True,2095.5330000724643,library_services_en.md,0.03177805800756621,0.0,1.0,1.0,0.3333333333333333,0.5
+hybrid,q03,Кітапты кітапханадан қанша күнге алуға болады?,cross_lingual,kk,True,2076.8154999241233,it_support_kk.md,0.032266458495966696,0.0,1.0,1.0,0.3333333333333333,0.5
+hybrid,q04,Какой минимальный GPA нужен для сохранения стипендии?,semantic,ru,True,2080.3423000033945,scholarship_ru.md,0.03278688524590164,1.0,1.0,1.0,1.0,1.0
+hybrid,q05,What happens if my GPA drops below the scholarship requirement?,cross_lingual,en,True,2094.5088998414576,academic_progress_en.md,0.03278688524590164,0.0,1.0,1.0,0.5,0.6309297535714574
+hybrid,q06,How many students are required to create a new club?,cross_lingual,en,True,2069.81290015392,club_events_en.md,0.03252247488101534,0.0,0.0,0.0,0.0,0.0
+hybrid,q07,Жаңа клубты тіркеу үшін қанша студент керек?,semantic,kk,True,2077.047099824995,clubs_kk.md,0.03278688524590164,1.0,1.0,1.0,1.0,1.0
+hybrid,q08,What is the fall deadline for registering a new student club?,cross_lingual,en,True,2081.755500053987,club_events_en.md,0.03252247488101534,0.0,0.0,0.0,0.0,0.0
+hybrid,q09,Что делать если я забыл пароль от университетского Wi-Fi?,cross_lingual,ru,True,2094.21469992958,it_support_kk.md,0.03278688524590164,1.0,1.0,1.0,1.0,1.0
+hybrid,q10,How quickly are ordinary IT support requests reviewed?,cross_lingual,en,True,2099.389199865982,library_services_en.md,0.0315136476426799,0.0,1.0,1.0,0.5,0.6309297535714574
+hybrid,q11,Во сколько начинается режим тишины в общежитии?,cross_lingual,ru,True,2092.265299987048,regulations_ru.md,0.03149801587301587,0.0,0.0,0.0,0.0,0.0
+hybrid,q12,When is the standard admissions application deadline?,semantic,en,True,2081.768700154498,admissions_en.md,0.03278688524590164,1.0,1.0,1.0,1.0,1.0
+hybrid,q13,REG-4721,identifier,mixed,True,2107.855699956417,regulations_catalog_en.md,0.03278688524590164,0.0,1.0,1.0,0.5,0.6590018048024133
+hybrid,q14,What is form APL-19 used for?,identifier,en,True,2085.846000118181,regulations_ru.md,0.03278688524590164,1.0,1.0,1.0,1.0,0.944847956559586
+hybrid,q15,Что регулирует REG-8850?,identifier,ru,True,2075.8509000297636,regulations_ru.md,0.03278688524590164,0.5,1.0,1.0,1.0,1.0
+hybrid,q16,What food is served in the university cafeteria?,unanswerable,en,False,2069.819899974391,regulations_catalog_en.md,0.031754032258064516,,,,,
+hybrid,q17,Где студенты могут парковать автомобили?,unanswerable,ru,False,2098.945900099352,housing_access_ru.md,0.03252247488101534,,,,,
+hybrid,q18,Какие спортивные секции доступны студентам?,unanswerable,ru,False,2079.710900085047,scholarship_ru.md,0.03252247488101534,,,,,
+reranked,q01,На сколько дней можно взять обычную книгу?,semantic,ru,True,3579.280399950221,library_ru.md,2.5324501991271973,1.0,1.0,1.0,1.0,1.0
+reranked,q02,How long can I borrow a regular book?,cross_lingual,en,True,3473.6408998724073,library_ru.md,-0.25870561599731445,1.0,1.0,1.0,1.0,1.0
+reranked,q03,Кітапты кітапханадан қанша күнге алуға болады?,cross_lingual,kk,True,3358.90099988319,library_ru.md,2.201096773147583,1.0,1.0,1.0,1.0,1.0
+reranked,q04,Какой минимальный GPA нужен для сохранения стипендии?,semantic,ru,True,3533.5574001073837,scholarship_ru.md,5.929305553436279,1.0,1.0,1.0,1.0,1.0
+reranked,q05,What happens if my GPA drops below the scholarship requirement?,cross_lingual,en,True,3548.412200063467,academic_progress_en.md,3.9482016563415527,0.0,1.0,1.0,0.5,0.6309297535714574
+reranked,q06,How many students are required to create a new club?,cross_lingual,en,True,3396.1895001120865,clubs_kk.md,3.1843578815460205,1.0,1.0,1.0,1.0,1.0
+reranked,q07,Жаңа клубты тіркеу үшін қанша студент керек?,semantic,kk,True,3503.366299904883,clubs_kk.md,6.351598739624023,1.0,1.0,1.0,1.0,1.0
+reranked,q08,What is the fall deadline for registering a new student club?,cross_lingual,en,True,3662.380800116807,clubs_kk.md,3.2281923294067383,1.0,1.0,1.0,1.0,1.0
+reranked,q09,Что делать если я забыл пароль от университетского Wi-Fi?,cross_lingual,ru,True,3500.5792998708785,it_support_kk.md,3.475816011428833,1.0,1.0,1.0,1.0,1.0
+reranked,q10,How quickly are ordinary IT support requests reviewed?,cross_lingual,en,True,3607.7899001538754,it_support_kk.md,0.17955009639263153,1.0,1.0,1.0,1.0,1.0
+reranked,q11,Во сколько начинается режим тишины в общежитии?,cross_lingual,ru,True,3510.251000057906,housing_en.md,0.21300406754016876,1.0,1.0,1.0,1.0,1.0
+reranked,q12,When is the standard admissions application deadline?,semantic,en,True,3540.7602000050247,admissions_en.md,5.651412010192871,1.0,1.0,1.0,1.0,1.0
+reranked,q13,REG-4721,identifier,mixed,True,3454.526900080964,regulations_catalog_en.md,4.304659843444824,0.0,1.0,1.0,0.5,0.639909328045346
+reranked,q14,What is form APL-19 used for?,identifier,en,True,3564.3126000650227,regulations_ru.md,3.841841697692871,1.0,1.0,1.0,1.0,1.0
+reranked,q15,Что регулирует REG-8850?,identifier,ru,True,3493.324999930337,regulations_ru.md,3.9035427570343018,0.5,1.0,1.0,1.0,1.0
+reranked,q16,What food is served in the university cafeteria?,unanswerable,en,False,3353.466199943796,library_ru.md,-9.033958435058594,,,,,
+reranked,q17,Где студенты могут парковать автомобили?,unanswerable,ru,False,3614.49580010958,housing_access_ru.md,-7.520403861999512,,,,,
+reranked,q18,Какие спортивные секции доступны студентам?,unanswerable,ru,False,3573.8155997823924,housing_access_ru.md,-8.228456497192383,,,,,
