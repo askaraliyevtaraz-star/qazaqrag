@@ -49,3 +49,19 @@ class ReadyResponse(BaseModel):
 class SourceFileResponse(BaseModel):
     source: str
     chunks: int
+
+
+class AgentQueryResponse(BaseModel):
+    answer: str
+
+    sources: list[SourceResponse]
+
+    route: str
+
+    effective_query: str
+
+    retrieval_attempts: int
+
+    trace: list[str]
+
+    latency_ms: float

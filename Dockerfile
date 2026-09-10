@@ -15,6 +15,7 @@ RUN pip install \
 
 COPY app ./app
 COPY rag ./rag
+COPY agent ./agent
 COPY scripts ./scripts
 COPY data ./data
 

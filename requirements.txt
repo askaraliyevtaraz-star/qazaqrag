@@ -5,3 +5,4 @@ bm25s==0.3.10
 fastapi[standard]
 pydantic-settings
 openai==3.10.0
+langgraph==1.2.11

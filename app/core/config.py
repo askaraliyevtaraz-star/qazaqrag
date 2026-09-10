@@ -13,6 +13,10 @@ class Settings(BaseSettings):
     qdrant_url: str = "http://localhost:6333"
     qdrant_collection: str = "qazaqrag_chunks"
 
+    agent_max_retrieval_attempts: int = 2
+
+    min_reranker_score: float | None = None
+
     retrieve_k: int = 10
     rerank_k: int = 8
     final_k: int = 3

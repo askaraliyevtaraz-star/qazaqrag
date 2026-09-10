@@ -5,12 +5,16 @@ from fastapi import (
 )
 
 from app.schemas import (
+    AgentQueryResponse,
     HealthResponse,
     QueryRequest,
     QueryResponse,
     ReadyResponse,
     SourceFileResponse,
     SourceResponse,
+)
+from app.services.agent_service import (
+    AgentRAGService,
 )
 from app.services.rag_service import (
     RAGService,
@@ -119,5 +123,58 @@ def query(
         ],
         retrieval_method=("dense+bm25+rrf+reranker"),
         llm_model=(service.generator.model_name),
+        latency_ms=latency_ms,
+    )
+
+
+def get_agent_service(
+    request: Request,
+) -> AgentRAGService:
+    return request.app.state.agent_service
+
+
+@router.post(
+    "/agent/query",
+    response_model=AgentQueryResponse,
+)
+def agent_query(
+    payload: QueryRequest,
+    request: Request,
+) -> AgentQueryResponse:
+    agent = get_agent_service(request)
+
+    try:
+        state, latency_ms = agent.query(payload.question)
+
+    except Exception as exc:
+        raise HTTPException(
+            status_code=500,
+            detail=("Agent workflow failed"),
+        ) from exc
+
+    return AgentQueryResponse(
+        answer=state["answer"],
+        sources=[
+            SourceResponse(**source)
+            for source in state.get(
+                "sources",
+                [],
+            )
+        ],
+        route=state["route"],
+        effective_query=state.get(
+            "effective_query",
+            payload.question,
+        ),
+        retrieval_attempts=(
+            state.get(
+                "retrieval_attempts",
+                0,
+            )
+        ),
+        trace=state.get(
+            "trace",
+            [],
+        ),
         latency_ms=latency_ms,
     )

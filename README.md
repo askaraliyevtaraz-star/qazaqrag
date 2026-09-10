@@ -87,3 +87,31 @@ Compared systems:
                           │
                           ▼
                  Answer + Citations
+
+
+
+## Agentic Retrieval Workflow
+
+START
+  |
+  v
+Router
+  |
+  +--> Source catalog --> END
+  |
+  +--> Identifier --> BM25 --> Reranker
+  |
+  +--> General query --> Hybrid Retrieval
+                             |
+                             v
+                       Evidence check
+                        /         \
+                    enough        weak
+                      |            |
+                  Generate       Rewrite
+                      |            |
+                     END      Retrieve again
+                                   |
+                              max attempts
+                                   |
+                               No answer
